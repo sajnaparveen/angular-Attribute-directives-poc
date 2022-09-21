@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="card">
+        <h1 class="card-header">attribute directives-ngclass</h1>
+      <div class="body">
+        <div class="col-md-12">
+            <p [ngClass]="{
+            'red' : highlightColor === 'red',
+            'green-color' : highlightColor === 'green',
+            'blue' : highlightColor === 'blue'
+            }">Click any button to highlight me!</p>
+        </div>
+      <div class="col-md-12">
+         <button class="btn btn-danger" (click)="highlight('red')">Red</button>
+         <button class="btn btn-success" (click)="highlight('green')">Green</button>
+         <button class="btn btn-primary" (click)="highlight('blue')">Blue</button>
+         
+        </div>
+      </div>
+      </div>
+      <div class="card">
+        <h1 class="card-header">attribute directives-ngclass</h1>
+      <div class="body">
+        <div *ngFor="let foods of food" [ngClass]="{'veg':foods.type === 'veg','nonveg':foods.type === 'nonveg'}"  [ngStyle]="{'background-color':'pink'}" >
+            <li>{{foods.name}}-{{foods.type}}</li>       
+        </div>
+      </div>
+      </div>
+      <div>
+      <li [ngStyle]="{'text-decoration':status}">jyhgcdksf</li>
+      <li [ngStyle]="{'text-decoration':status}">scdeferf</li>
+      <li [ngStyle]="{'text-decoration':status}">cedfvregfte</li>
+      <li [ngStyle]="{'text-decoration':status}">scedfvefv</li>
+      <button (click)="toggle()" >toggle</button>
+    </div>
+</div>

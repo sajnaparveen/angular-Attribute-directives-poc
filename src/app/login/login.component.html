@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="card">
+    <p class="card-header">interpulation</p>
+  <div class="body">
+    <form>
+      <input type="text" value={{name}} class="form-control" disabled={{status}}/>
+      <button class="btn btn-primary mt-4" (click)="setenable()">click</button>
+    </form>
+  </div>
+  </div>
+  <div class="card">
+    <p class="card-header">property</p>
+  <div class="body">
+    <form>
+    <input type="text" [value]="name" class="form-control" [disabled]="status"/>
+    <button   class="btn btn-primary mt-4" (click)="enable()">Enable</button>
+  </form>
+  </div>
+  </div>
+  <div class="card" >
+    <h1 class="card-header">structural directives</h1>
+    <div class="body">
+      <h4>ngif, ngfor ,ngswitch</h4>
+  <div class="card">
+    <p class="card-header">ngif</p>
+  <div class="body">
+  <div *ngIf="userName;else elseblock">
+    welcome -{{name}}
+  </div>
+  <ng-template #elseblock>
+     not welcome
+  </ng-template>
+  </div>
+  </div>
+  <div class="card">
+    <p class="card-header">ngfor and ng switch</p>
+  <div class="body">
+    <div *ngFor="let prod of product;index as i">
+      <div [ngSwitch]="prod.status" >
+        <div *ngSwitchCase="'user'">
+      <li>{{i+1}}-{{prod.name}}</li>
+    </div>
+      <div *ngSwitchDefault>
+       defaultvalue - {{prod.name}}
+      </div>
+    </div>
+    </div>
+  </div>
+  </div>
+  
+</div>
+</div>
+</div>

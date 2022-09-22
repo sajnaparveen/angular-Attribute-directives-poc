@@ -1,0 +1,27 @@
+
+<div class="container">
+    <div class="card">
+        <p class="card-header">databinding</p>
+      <div class="body">
+        <table class="table">
+            <thead>
+              <tr>
+                <th>name</th>
+                <th>email</th>
+                <th>active-status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{name}}</td>
+                <td>{{email}}</td>
+                <td>{{active}}</td>
+              </tr>
+            </tbody>
+          </table>
+        
+          <button class="btn btn-success" (click)="activebtn()" [disabled]="actbtn" >active</button>
+          <button class="btn btn-danger" (click)="inactivebtn()" [disabled]="inactbtn">inactive</button>
+     
+      </div>
+</div>

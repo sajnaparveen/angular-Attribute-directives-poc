@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { DataBindingDemoComponent } from './data-binding-demo/data-binding-demo.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    DataBindingDemoComponent
   ],
   imports: [
     BrowserModule,

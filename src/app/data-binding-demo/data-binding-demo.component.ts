@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Action } from 'rxjs/internal/scheduler/Action';
+import { SampleService } from '../service/sample.service';
 
 @Component({
   selector: 'app-data-binding-demo',
@@ -8,7 +9,13 @@ import { Action } from 'rxjs/internal/scheduler/Action';
 })
 export class DataBindingDemoComponent implements OnInit {
 
-  constructor() { }
+  constructor(public sample:SampleService) { }
+  increase(){
+    this.sample.count ++
+  }
+  decrease(){
+    this.sample.count --
+  }
    name='sajna'
    email='sajna@gmail.com'
    active='inactive'
